@@ -3,12 +3,13 @@
     "@cloudflare/vite-plugin": "^1.54.2",
     "autoprefixer": "^10.5.4",
     "postcss": "^8.5.24",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "wrangler": "^4.127.1"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "wrangler dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "wrangler dev"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.4",
