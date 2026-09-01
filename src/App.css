@@ -105,6 +105,9 @@
   max-width: 700px;
 }
 
+textarea {
+  min-height: 140px;
+}
 
 /* 編集・削除ボタン：フラットで控えめ */
 /* .memo-actions {
