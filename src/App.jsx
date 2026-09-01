@@ -203,7 +203,7 @@ function App() {
 
             <div className="input-area">
               {editId ? (
-                <EditForm
+                <EditForm className="memo-textarea"
                   title={title}
                   setTitle={setTitle}
                   text={text}
@@ -212,7 +212,7 @@ function App() {
                   cancelEdit={() => setEditId(null)}
                 />
               ) : (
-                <AddForm
+                <AddForm className="memo-textarea"
                   title={title}
                   setTitle={setTitle}
                   text={text}
