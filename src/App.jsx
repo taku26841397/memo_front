@@ -17,7 +17,7 @@ function MemoDetail({ memos }) {
   if (!memo) return <div>メモがありません</div>;
 
   const updateDetail = () => {
-    fetch(`http://localhost:8000/api/memos/${memo.id}/`, {
+    fetch(`https://memo-api-4okr.onrender.com/api/memos/${memo.id}/`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -95,13 +95,13 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/memos/")
+    fetch("https://memo-api-4okr.onrender.com/api/memos/")
       .then((res) => res.json())
       .then((data) => setMemos(data));
   }, []);
 
   const addMemo = () => {
-    fetch("http://localhost:8000/api/memos/", {
+    fetch("https://memo-api-4okr.onrender.com/api/memos/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: title, content: text }),
@@ -120,7 +120,7 @@ function App() {
   };
 
   const updateMemo = () => {
-    fetch(`http://localhost:8000/api/memos/${editId}/`, {
+    fetch(`https://memo-api-4okr.onrender.com/api/memos/${editId}/`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: title, content: text }),
@@ -138,7 +138,7 @@ function App() {
   };
 
   const deleteMemo = (id) => {
-    fetch(`http://localhost:8000/api/memos/${id}/`, {
+    fetch(`https://memo-api-4okr.onrender.com/api/memos/${id}/`, {
       method: "DELETE",
     }).then(() => {
       setMemos(memos.filter((memo) => memo.id !== id));
