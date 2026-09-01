@@ -8,6 +8,7 @@ export const AddForm = ({ title, setTitle, text, setText, addMemo }) => {
                 placeholder="タイトル"
             />
             <textarea
+                className="memo-textarea"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="内容"

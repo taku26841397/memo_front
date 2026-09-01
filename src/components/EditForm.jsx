@@ -14,7 +14,7 @@ export const EditForm = ({
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="タイトル"
             />
-            <textarea
+            <textarea className="memo-textarea"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="内容"
