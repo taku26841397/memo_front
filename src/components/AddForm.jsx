@@ -3,16 +3,19 @@ export const AddForm = ({ title, setTitle, text, setText, addMemo }) => {
     return (
         <div className="input-area">
             <input
+                className="memo-input"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="タイトル"
             />
+
             <textarea
                 className="memo-textarea"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="内容"
             />
+
             <button className="add-btn" onClick={addMemo}>
                 追加
             </button>
