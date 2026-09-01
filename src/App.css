@@ -1,0 +1,289 @@
+/* 全体レイアウト：余白広め・静かな雰囲気 */
+.container {
+  width: 700px;
+  max-width: 100%;
+  min-height: 150vh;
+  margin: 0px auto;
+  padding: 32px;
+  background: #fdfdfd;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  font-family: "Segoe UI", "Hiragino Sans", sans-serif;
+}
+
+/* タイトル：淡い色で静かに */
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: #2f2f2f;
+  letter-spacing: 0.5px;
+}
+
+/* 入力エリア：柔らかい雰囲気 */
+.input-area {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.memo-input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #fafafa;
+  transition: border-color 0.2s;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.memo-input:focus {
+  border-color: #b0c4de;
+  outline: none;
+
+}
+
+/* ボタン：フラットで今風 */
+.add-btn,
+.update-btn {
+  width: fit-content;
+  align-self: flex-end;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.2s;
+}
+
+.add-btn {
+  background: #6bbf59;
+}
+
+.update-btn {
+  background: #4a90e2;
+}
+
+.add-btn:hover,
+.update-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* メモ一覧：余白広め */
+
+
+/* メモカード：ノート風・淡い影 */
+/* .memo-item {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #ececec;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* メモ本文：読みやすい */
+.memo-textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: vertical;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+
+/* 編集・削除ボタン：フラットで控えめ */
+/* .memo-actions {
+  display: flex;
+  gap: 10px;
+} */
+
+
+.memo-item {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #ececec;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* ← ここが重要 */
+  gap: 12px;
+}
+
+/* 左側：タイトル＋プレビューを縦に並べる */
+.memo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+/* タイトル */
+.memo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 内容プレビュー */
+.memo-preview {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 右側のボタンを縦に並べる */
+.memo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 14px;
+  margin-right: 10px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.edit-btn {
+  background: #f0ad4e;
+}
+
+.delete-btn {
+  background: #e57373;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+
+
+/* 詳細ページ */
+.detail-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.detail-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.detail-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.detail-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  white-space: pre-wrap;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 8px 14px;
+  background: #e8f0fe;
+  color: #4a90e2;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.back-link:hover {
+  background: #d6e4fb;
+  transform: translateY(-2px);
+}
+
+
+.note-paper {
+  background: #fffef5;
+  border-left: 4px solid #f4d06f;
+  padding: 20px;
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 16px;
+  white-space: pre-wrap;
+}
+
+
+/* 日付 */
+.memo-date-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 24px 0 12px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 4px;
+}
+
+
+
+/* ページ送り */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.page-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #e8e8e8;
+  cursor: pointer;
+}
+
+.page-btn:disabled {
+  background: #ccc;
+  cursor: default;
+}
+
+.page-info {
+  font-size: 14px;
+  color: #555;
+}
